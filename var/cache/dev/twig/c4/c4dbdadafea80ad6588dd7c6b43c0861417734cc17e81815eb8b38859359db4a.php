@@ -69,18 +69,18 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t";
         // line 47
         $this->displayBlock('body', $context, $blocks);
-        // line 128
+        // line 118
         echo " ";
-        // line 129
+        // line 119
         echo "</body>
 ";
-        // line 130
+        // line 120
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 134
+        // line 124
         echo " ";
-        // line 135
+        // line 125
         $this->displayBlock('custompage_script', $context, $blocks);
-        // line 137
+        // line 127
         echo "
 </html>
 ";
@@ -102,7 +102,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Application Todo List";
+        echo "Couette et café";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -188,17 +188,14 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t";
         // line 49
         $this->displayBlock('menu', $context, $blocks);
-        // line 90
+        // line 84
         echo " ";
-        // line 91
+        // line 85
         echo "             </header>
 
 \t<div style=\"min-height: 90%\" class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-12\">
-\t\t\t\t<div>
-\t\t\t\t\tTodo List !
-\t\t\t\t</div>
 
 \t\t\t</div>
 \t\t</div>
@@ -206,17 +203,17 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t<div class=\"container body-container\">
 <main>
 \t\t\t";
-        // line 105
+        // line 96
         $this->displayBlock('main', $context, $blocks);
-        // line 113
+        // line 104
         echo " ";
-        // line 114
+        // line 105
         echo "</main>
 \t\t</div> <!-- /.body-container -->
 \t\t";
-        // line 116
+        // line 107
         $this->displayBlock('footer', $context, $blocks);
-        // line 125
+        // line 115
         echo "
 \t</div>
 \t<!-- /.container -->
@@ -247,8 +244,8 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
                     <div class=\"container\">
                       <a class=\"navbar-brand\" href=\"";
         // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("owner");
-        echo "\">ToDo</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room");
+        echo "\">Home</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
@@ -260,26 +257,11 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         echo "
                         </ul>
                       </div>
-               v class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 64
-        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 64, $this->source); })()), "html", null, true);
-        echo "! ✅</h1>
+    <h1>Menu</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 68
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/src/Controller/RoomController.php", 0), "html", null, true);
-        echo "\">src/Controller/RoomController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 69
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/templates/room/index.html.twig", 0), "html", null, true);
-        echo "\">templates/room/index.html.twig</a></code></li>
-    </ul>
 </div>
                       ";
-        // line 87
+        // line 81
         echo "                    </div>
                   </nav>
 \t\t\t\t
@@ -292,7 +274,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 105
+    // line 96
     public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -302,7 +284,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
-        // line 106
+        // line 97
         echo "\t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t<p>
@@ -319,7 +301,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 116
+    // line 107
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -329,11 +311,10 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 117
+        // line 108
         echo "\t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-12\">
 \t\t\t\t<footer>
-\t\t\t\t\t<p>FOOTER SUPER</p>
 \t\t\t\t</footer>
 \t\t\t</div>
 \t\t</div>
@@ -346,7 +327,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 130
+    // line 120
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -356,14 +337,14 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 131
+        // line 121
         echo "  <!-- Bootstrap core JavaScript -->
   <script src=\"";
-        // line 132
+        // line 122
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 133
+        // line 123
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -375,7 +356,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 135
+    // line 125
     public function block_custompage_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -400,7 +381,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     public function getDebugInfo()
     {
-        return array (  379 => 135,  367 => 133,  363 => 132,  360 => 131,  350 => 130,  333 => 117,  323 => 116,  306 => 106,  296 => 105,  283 => 87,  277 => 69,  273 => 68,  266 => 64,  259 => 60,  250 => 54,  245 => 51,  243 => 50,  233 => 49,  220 => 125,  218 => 116,  214 => 114,  212 => 113,  210 => 105,  194 => 91,  192 => 90,  190 => 49,  187 => 48,  176 => 47,  164 => 35,  161 => 34,  151 => 33,  135 => 37,  133 => 33,  128 => 31,  125 => 30,  115 => 29,  96 => 28,  84 => 137,  82 => 135,  80 => 134,  78 => 130,  75 => 129,  73 => 128,  71 => 47,  67 => 45,  65 => 29,  61 => 28,  52 => 21,);
+        return array (  360 => 125,  348 => 123,  344 => 122,  341 => 121,  331 => 120,  315 => 108,  305 => 107,  288 => 97,  278 => 96,  265 => 81,  256 => 60,  247 => 54,  242 => 51,  240 => 50,  230 => 49,  217 => 115,  215 => 107,  211 => 105,  209 => 104,  207 => 96,  194 => 85,  192 => 84,  190 => 49,  187 => 48,  176 => 47,  164 => 35,  161 => 34,  151 => 33,  135 => 37,  133 => 33,  128 => 31,  125 => 30,  115 => 29,  96 => 28,  84 => 127,  82 => 125,  80 => 124,  78 => 120,  75 => 119,  73 => 118,  71 => 47,  67 => 45,  65 => 29,  61 => 28,  52 => 21,);
     }
 
     public function getSourceContext()
@@ -432,7 +413,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>{% block title %}Application Todo List{% endblock %}</title>
+<title>{% block title %}Couette et café{% endblock %}</title>
 {% block stylesheets %}
 <!-- Bootstrap -->
   <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
@@ -458,7 +439,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t\t\t  <!-- Navigation -->
                   <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
                     <div class=\"container\">
-                      <a class=\"navbar-brand\" href=\"{{ path('owner') }}\">ToDo</a>
+                      <a class=\"navbar-brand\" href=\"{{ path('room') }}\">Home</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
@@ -467,14 +448,8 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
                           {{ render_bootstrap_menu('main') }}
                         </ul>
                       </div>
-               v class=\"example-wrapper\">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Menu</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"{{ '/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/src/Controller/RoomController.php'|file_link(0) }}\">src/Controller/RoomController.php</a></code></li>
-        <li>Your template at <code><a href=\"{{ '/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/templates/room/index.html.twig'|file_link(0) }}\">templates/room/index.html.twig</a></code></li>
-    </ul>
 </div>
                       {#
                       {% if app.user %}
@@ -500,9 +475,6 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t<div style=\"min-height: 90%\" class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-12\">
-\t\t\t\t<div>
-\t\t\t\t\tTodo List !
-\t\t\t\t</div>
 
 \t\t\t</div>
 \t\t</div>
@@ -524,7 +496,6 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-12\">
 \t\t\t\t<footer>
-\t\t\t\t\t<p>FOOTER SUPER</p>
 \t\t\t\t</footer>
 \t\t\t</div>
 \t\t</div>
@@ -543,6 +514,6 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 {% endblock %}
 
 </html>
-", "baselayout.html.twig", "/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/templates/baselayout.html.twig");
+", "baselayout.html.twig", "/home/geoffroy/Documents/CSC4101/proj-agvoy/agvoy-app-03/templates/baselayout.html.twig");
     }
 }

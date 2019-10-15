@@ -300,16 +300,24 @@
     <parameter key="bootstrap_menu.menus" type="collection">
       <parameter key="main" type="collection">
         <parameter key="items" type="collection">
-          <parameter key="todos" type="collection">
-            <parameter key="label">region</parameter>
+          <parameter key="rooms" type="collection">
+            <parameter key="label">Rooms</parameter>
+            <parameter key="route">room</parameter>
+            <parameter key="is_divider">false</parameter>
+            <parameter key="route_parameters" type="collection"/>
+            <parameter key="roles" type="collection"/>
+            <parameter key="items" type="collection"/>
+          </parameter>
+          <parameter key="regions" type="collection">
+            <parameter key="label">Regions</parameter>
             <parameter key="route">region</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
             <parameter key="roles" type="collection"/>
             <parameter key="items" type="collection"/>
           </parameter>
-          <parameter key="actives" type="collection">
-            <parameter key="label">Active tasks</parameter>
+          <parameter key="owners" type="collection">
+            <parameter key="label">Owners</parameter>
             <parameter key="route">owner</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
@@ -2217,14 +2225,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>

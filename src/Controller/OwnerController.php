@@ -12,7 +12,7 @@ class OwnerController extends AbstractController
      */
     public function index()
     {
-        return $this->render('baselayout.html.twig', [
+        return $this->render('owner/index.html.twig', [
             'controller_name' => 'OwnerController',
         ]);
     }

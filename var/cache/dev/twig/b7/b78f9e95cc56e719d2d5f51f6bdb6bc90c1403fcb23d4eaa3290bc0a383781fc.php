@@ -26,14 +26,14 @@ class __TwigTemplate_f1f36362313caf92be1616765457d9009840e9574754d7cc3e97c3da3c0
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'main' => [$this, 'block_main'],
         ];
     }
 
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "baselayout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_f1f36362313caf92be1616765457d9009840e9574754d7cc3e97c3da3c0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "region/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "region/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("baselayout.html.twig", "region/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -75,14 +75,14 @@ class __TwigTemplate_f1f36362313caf92be1616765457d9009840e9574754d7cc3e97c3da3c0
     }
 
     // line 5
-    public function block_body($context, array $blocks = [])
+    public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 6
         echo "<style>
@@ -134,11 +134,11 @@ class __TwigTemplate_f1f36362313caf92be1616765457d9009840e9574754d7cc3e97c3da3c0
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'baselayout.html.twig' %}
 
 {% block title %}Hello RegionController!{% endblock %}
 
-{% block body %}
+{% block main %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
@@ -154,6 +154,6 @@ class __TwigTemplate_f1f36362313caf92be1616765457d9009840e9574754d7cc3e97c3da3c0
     </ul>
 </div>
 {% endblock %}
-", "region/index.html.twig", "/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/templates/region/index.html.twig");
+", "region/index.html.twig", "/home/geoffroy/Documents/CSC4101/proj-agvoy/agvoy-app-03/templates/region/index.html.twig");
     }
 }

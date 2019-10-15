@@ -2,12 +2,16 @@ bootstrap_menu:
   menus:
     main:
       items:
-        todos:
-          label: 'region'
+        rooms:
+          label: 'Rooms'
+          route: 'room'
+        regions:
+          label: 'Regions'
           route: 'region'
-        actives:
-          label: 'Active tasks'
+        owners:
+          label: 'Owners'
           route: 'owner'
+         
     anonymousaccount:
       items:
         account:
