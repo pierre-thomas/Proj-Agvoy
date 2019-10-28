@@ -310,7 +310,7 @@
           </parameter>
           <parameter key="regions" type="collection">
             <parameter key="label">Regions</parameter>
-            <parameter key="route">region</parameter>
+            <parameter key="route">region_index</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
             <parameter key="roles" type="collection"/>
@@ -470,6 +470,13 @@
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>/home/geoffroy/Documents/CSC4101/proj-agvoy/agvoy-app-03/var/log/dev.log</argument>
     </service>
+    <service id="App\Controller\FrontOfficeController" class="App\Controller\FrontOfficeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CDOTD6..App\Controller\FrontOfficeController"/>
+      </call>
+    </service>
     <service id="App\Controller\OwnerController" class="App\Controller\OwnerController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -493,6 +500,9 @@
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
+    </service>
+    <service id="App\Form\RegionType" class="App\Form\RegionType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Repository\OwnerRepository" class="App\Repository\OwnerRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -833,9 +843,11 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\RegionType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1101,7 +1113,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.Fck5jT9"/>
+      <argument type="service" id=".service_locator.9YwTB5i"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4635,6 +4647,9 @@
       <tag name="twig.extension"/>
       <argument>%bootstrap_menu.menus%</argument>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FrontOfficeController" class="App\Controller\FrontOfficeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FrontOfficeController" class="App\Controller\FrontOfficeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\FrontOfficeController" class="App\Controller\FrontOfficeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\OwnerController" class="App\Controller\OwnerController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\OwnerController" class="App\Controller\OwnerController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\OwnerController" class="App\Controller\OwnerController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4646,6 +4661,8 @@
     <service id=".abstract.instanceof.App\Controller\RoomController" class="App\Controller\RoomController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegionType" class="App\Form\RegionType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RegionType" class="App\Form\RegionType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OwnerRepository" class="App\Repository\OwnerRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\OwnerRepository" class="App\Repository\OwnerRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\RegionRepository" class="App\Repository\RegionRepository" autowire="true" abstract="true"/>
@@ -4820,10 +4837,32 @@
         <argument key="room" type="service" id=".errored..service_locator.BkOHXLl.App\Entity\Room"/>
       </argument>
     </service>
-    <service id=".service_locator.iOQRjul" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.BPeAJFx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="regionRepository" type="service" id="App\Repository\RegionRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.vIHt.Cx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="region" type="service" id=".errored..service_locator.vIHt.Cx.App\Entity\Region"/>
+      </argument>
+    </service>
+    <service id=".service_locator.AaP8Od2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\FrontOfficeController::consultRooms" type="service" id=".service_locator.BkOHXLl"/>
+        <argument key="App\Controller\RegionController::delete" type="service" id=".service_locator.vIHt.Cx"/>
+        <argument key="App\Controller\RegionController::edit" type="service" id=".service_locator.vIHt.Cx"/>
+        <argument key="App\Controller\RegionController::index" type="service" id=".service_locator.BPeAJFx"/>
+        <argument key="App\Controller\RegionController::show" type="service" id=".service_locator.vIHt.Cx"/>
         <argument key="App\Controller\RoomController::show" type="service" id=".service_locator.BkOHXLl"/>
+        <argument key="App\Controller\FrontOfficeController:consultRooms" type="service" id=".service_locator.BkOHXLl"/>
+        <argument key="App\Controller\RegionController:delete" type="service" id=".service_locator.vIHt.Cx"/>
+        <argument key="App\Controller\RegionController:edit" type="service" id=".service_locator.vIHt.Cx"/>
+        <argument key="App\Controller\RegionController:index" type="service" id=".service_locator.BPeAJFx"/>
+        <argument key="App\Controller\RegionController:show" type="service" id=".service_locator.vIHt.Cx"/>
         <argument key="App\Controller\RoomController:show" type="service" id=".service_locator.BkOHXLl"/>
       </argument>
     </service>
@@ -4886,9 +4925,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Fck5jT9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.9YwTB5i" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\RegionType" type="service" id="App\Form\RegionType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
@@ -5105,6 +5145,12 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.CDOTD6..App\Controller\FrontOfficeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\FrontOfficeController"/>
+      <argument>App\Controller\FrontOfficeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CDOTD6." method="withContext"/>
+    </service>
     <service id=".service_locator.CDOTD6..App\Controller\OwnerController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\OwnerController"/>
       <argument>App\Controller\OwnerController</argument>
@@ -5216,12 +5262,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.iOQRjul"/>
+      <argument type="service" id=".service_locator.AaP8Od2"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.iOQRjul"/>
+      <argument type="service" id=".service_locator.AaP8Od2"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -5246,6 +5292,7 @@
       </argument>
     </service>
     <service id=".errored..service_locator.BkOHXLl.App\Entity\Room" class="App\Entity\Room"/>
+    <service id=".errored..service_locator.vIHt.Cx.App\Entity\Region" class="App\Entity\Region"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.JgKnBZT"/>
       <argument type="collection">
@@ -5598,7 +5645,7 @@
     <service id="Twig\Environment" alias="twig" public="false"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.iOQRjul"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.AaP8Od2"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="validator" alias="debug.validator" public="true"/>

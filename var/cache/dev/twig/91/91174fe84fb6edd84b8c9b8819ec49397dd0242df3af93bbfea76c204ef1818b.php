@@ -91,7 +91,7 @@ class __TwigTemplate_40803591969b3b07efbc3d710a1d691783460d5effee8829eebd5f9fc49
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello There !</h1>
+    <h1>Room</h1>
 </div>
 ";
         
@@ -130,7 +130,7 @@ class __TwigTemplate_40803591969b3b07efbc3d710a1d691783460d5effee8829eebd5f9fc49
 </style>
 
 <div class=\"example-wrapper\">
-    <h1>Hello There !</h1>
+    <h1>Room</h1>
 </div>
 {% endblock %}
 ", "room/index.html.twig", "/home/geoffroy/Documents/CSC4101/proj-agvoy/agvoy-app-03/templates/room/index.html.twig");

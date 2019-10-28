@@ -26,7 +26,7 @@ class __TwigTemplate_819db3315d8c582af614f660e15dbc5cd20d4698477840dd5356118b975
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'main' => [$this, 'block_main'],
         ];
     }
 
@@ -75,14 +75,14 @@ class __TwigTemplate_819db3315d8c582af614f660e15dbc5cd20d4698477840dd5356118b975
     }
 
     // line 5
-    public function block_body($context, array $blocks = [])
+    public function block_main($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "main"));
 
         // line 6
         echo "
@@ -147,7 +147,7 @@ class __TwigTemplate_819db3315d8c582af614f660e15dbc5cd20d4698477840dd5356118b975
 
 {% block title %}List of rooms!{% endblock %}
 
-{% block body %}
+{% block main %}
 
         <h1>Rooms list</h1>
         <p>Here are all your rooms:</p>
@@ -166,6 +166,6 @@ class __TwigTemplate_819db3315d8c582af614f660e15dbc5cd20d4698477840dd5356118b975
     </table>
             
 {% endblock %}
-", "room/show.html.twig", "/mci/ei1821/zardi_ge/CSC4101/proj-agvoy/agvoy-app-03/templates/room/show.html.twig");
+", "room/show.html.twig", "/home/geoffroy/Documents/CSC4101/proj-agvoy/agvoy-app-03/templates/room/show.html.twig");
     }
 }

@@ -7,7 +7,7 @@ bootstrap_menu:
           route: 'room'
         regions:
           label: 'Regions'
-          route: 'region'
+          route: 'region_index'
         owners:
           label: 'Owners'
           route: 'owner'

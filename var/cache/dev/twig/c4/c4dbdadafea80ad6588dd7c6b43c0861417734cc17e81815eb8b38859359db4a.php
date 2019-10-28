@@ -69,18 +69,18 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t";
         // line 47
         $this->displayBlock('body', $context, $blocks);
-        // line 118
+        // line 120
         echo " ";
-        // line 119
+        // line 121
         echo "</body>
 ";
-        // line 120
+        // line 122
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 124
+        // line 126
         echo " ";
-        // line 125
-        $this->displayBlock('custompage_script', $context, $blocks);
         // line 127
+        $this->displayBlock('custompage_script', $context, $blocks);
+        // line 129
         echo "
 </html>
 ";
@@ -205,15 +205,15 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t\t";
         // line 96
         $this->displayBlock('main', $context, $blocks);
-        // line 104
+        // line 106
         echo " ";
-        // line 105
+        // line 107
         echo "</main>
 \t\t</div> <!-- /.body-container -->
 \t\t";
-        // line 107
+        // line 109
         $this->displayBlock('footer', $context, $blocks);
-        // line 115
+        // line 117
         echo "
 \t</div>
 \t<!-- /.container -->
@@ -244,14 +244,14 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
                     <div class=\"container\">
                       <a class=\"navbar-brand\" href=\"";
         // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
                       <div class=\"collapse navbar-collapse\" id=\"navbarsMainDefault\">
                         <ul class=\"navbar-nav mr-auto\">
-                          ";
+                            ";
         // line 60
         echo $this->extensions['Camurphy\BootstrapMenuBundle\Twig\Extension\MenuExtension']->renderMenu($this->env, "main");
         echo "
@@ -288,7 +288,9 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         echo "\t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t<p>
-\t\t\t\t\t\t<i>MAIN</i>
+\t\t\t\t\t\t<div class=\"example-wrapper\">
+    \t\t\t\t\t<h1>Hello There !</h1>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</p>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -301,7 +303,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 107
+    // line 109
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -311,7 +313,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 108
+        // line 110
         echo "\t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-12\">
 \t\t\t\t<footer>
@@ -327,7 +329,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 120
+    // line 122
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -337,14 +339,14 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 121
+        // line 123
         echo "  <!-- Bootstrap core JavaScript -->
   <script src=\"";
-        // line 122
+        // line 124
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 123
+        // line 125
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -356,7 +358,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     }
 
-    // line 125
+    // line 127
     public function block_custompage_script($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -381,7 +383,7 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 
     public function getDebugInfo()
     {
-        return array (  360 => 125,  348 => 123,  344 => 122,  341 => 121,  331 => 120,  315 => 108,  305 => 107,  288 => 97,  278 => 96,  265 => 81,  256 => 60,  247 => 54,  242 => 51,  240 => 50,  230 => 49,  217 => 115,  215 => 107,  211 => 105,  209 => 104,  207 => 96,  194 => 85,  192 => 84,  190 => 49,  187 => 48,  176 => 47,  164 => 35,  161 => 34,  151 => 33,  135 => 37,  133 => 33,  128 => 31,  125 => 30,  115 => 29,  96 => 28,  84 => 127,  82 => 125,  80 => 124,  78 => 120,  75 => 119,  73 => 118,  71 => 47,  67 => 45,  65 => 29,  61 => 28,  52 => 21,);
+        return array (  362 => 127,  350 => 125,  346 => 124,  343 => 123,  333 => 122,  317 => 110,  307 => 109,  288 => 97,  278 => 96,  265 => 81,  256 => 60,  247 => 54,  242 => 51,  240 => 50,  230 => 49,  217 => 117,  215 => 109,  211 => 107,  209 => 106,  207 => 96,  194 => 85,  192 => 84,  190 => 49,  187 => 48,  176 => 47,  164 => 35,  161 => 34,  151 => 33,  135 => 37,  133 => 33,  128 => 31,  125 => 30,  115 => 29,  96 => 28,  84 => 129,  82 => 127,  80 => 126,  78 => 122,  75 => 121,  73 => 120,  71 => 47,  67 => 45,  65 => 29,  61 => 28,  52 => 21,);
     }
 
     public function getSourceContext()
@@ -439,13 +441,13 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t\t\t  <!-- Navigation -->
                   <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark fixed-top\">
                     <div class=\"container\">
-                      <a class=\"navbar-brand\" href=\"{{ path('room') }}\">Home</a>
+                      <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Home</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
                       <div class=\"collapse navbar-collapse\" id=\"navbarsMainDefault\">
                         <ul class=\"navbar-nav mr-auto\">
-                          {{ render_bootstrap_menu('main') }}
+                            {{ render_bootstrap_menu('main') }}
                         </ul>
                       </div>
     <h1>Menu</h1>
@@ -485,7 +487,9 @@ class __TwigTemplate_e81b33190a038b4087861331bed0acdd85adec52ca81f6c27c217f1da20
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-12\">
 \t\t\t\t\t<p>
-\t\t\t\t\t\t<i>MAIN</i>
+\t\t\t\t\t\t<div class=\"example-wrapper\">
+    \t\t\t\t\t<h1>Hello There !</h1>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t</p>
 \t\t\t\t</div>
 \t\t\t</div>

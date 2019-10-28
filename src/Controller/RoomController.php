@@ -44,4 +44,29 @@ class RoomController extends AbstractController
     public function show(Room $room){
         return $this->render('room/show.html.twig',['room'=>$room]);
     }
+    
+    /**
+     * @Route("/room/{id}/like", name = "room_show")
+     */
+    public function consultRooms(Room $room){
+        
+        $id = $room->getId();
+        
+        $likes = $this->get('session')->get('likes');
+        
+        // si l'identifiant n'est pas présent dans le tableau des likes, l'ajouter
+        if (! in_array($id, $likes) )
+        {
+            $likes[] = $id;
+        }
+        else
+        // sinon, le retirer du tableau
+        {
+            $likes = array_diff($likes, array($id));
+        }
+        
+        $this->get('session')->set('likes', $likes);
+        
+        return $this->redirectToRoute('room_index');
+    }
 }
