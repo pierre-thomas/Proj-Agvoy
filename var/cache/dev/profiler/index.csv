@@ -172,3 +172,7 @@ ba57c6,127.0.0.1,GET,http://localhost:8000/room/list,1571141593,,500
 9956f6,127.0.0.1,GET,http://localhost:8000/room/list,1571142166,,500
 852099,127.0.0.1,GET,http://localhost:8000/room/list,1571142217,fee2f9,200
 fee2f9,127.0.0.1,GET,http://localhost:8000/room/list,1571142217,,500
+bc52d5,127.0.0.1,GET,http://localhost:8000/room,1574373884,,200
+02f42d,127.0.0.1,GET,http://localhost:8000/,1574373887,,404
+d3d2db,127.0.0.1,GET,http://localhost:8000/index,1574373899,69b1ba,200
+69b1ba,127.0.0.1,GET,http://localhost:8000/index,1574373899,,404
